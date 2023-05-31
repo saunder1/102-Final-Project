@@ -1,20 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 :root {
     --scarf-color: #5D5FB4;
     --scarf-transparent: #5D5FB450;
     --mountain-color: #A43C23;
     --mountain-transparent: #A43C2350;
-    --border-color: #9f9f9f;
+    --border-color: #e3d0bf;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; border: 0; }
 
+body {
+    font-family: 'Roboto Slab', serif;
+    color: var(--border-color);
+}
+
 header {
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
     background-image: url(images/band-landscape.JPG);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: #181818;
 }
 
 header img {
@@ -26,7 +36,6 @@ header img {
 }
 
 main {
-    min-height: 200vh;
     position: relative;
     z-index: 2;
 }
@@ -34,7 +43,7 @@ main {
 .content-boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: #181818;
 }
 
@@ -53,42 +62,39 @@ main {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    border: 10px solid var(--border-color);
 }
 
 #box1 {
     background-color: var(--scarf-color);
-    border: 5px solid var(--border-color);
 }
 
 #box2 {
     background-color: var(--mountain-color);
-    border: 5px solid var(--border-color);
 }
 
 #box3 {
     background-color: var(--mountain-color);
-    border: 5px solid var(--border-color);
 }
 
 #box4 {
     background-color: var(--scarf-color);
-    border: 5px solid var(--border-color);
 }
 
 footer {
-    height: 30vh;
+    height: 20vh;
     background-color: #101010;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5%;
+    padding: 5%;
     position: relative;
     z-index: 2;
 }
 
 #credit {
     width: 80%;
-    font-size: 2em;
+    font-size: 2vw;
     color: var(--border-color);
 }
 

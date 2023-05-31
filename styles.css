@@ -38,6 +38,8 @@ header img {
 main {
     position: relative;
     z-index: 2;
+    width: 100%;
+    overflow: hidden;
 }
 
 .content-boxes {
@@ -83,6 +85,8 @@ main {
 
 footer {
     height: 20vh;
+    width: 100%;
+    overflow: hidden;
     background-color: #101010;
     display: flex;
     justify-content: space-between;
@@ -102,7 +106,6 @@ footer {
     width: 10%;
     #footer-img {
         width: 100%;
-        height: auto;
     }
 }
 

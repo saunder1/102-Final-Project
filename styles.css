@@ -6,6 +6,7 @@
     --mountain-color: #A43C23;
     --mountain-transparent: #A43C2350;
     --border-color: #e3d0bf;
+    --border-transparent: #e3d0bf75;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; border: 0; }
@@ -13,6 +14,7 @@
 body {
     font-family: 'Roboto Slab', serif;
     color: var(--border-color);
+    background-color: #181818;
 }
 
 header {
@@ -24,12 +26,49 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-color: #181818;
+
+    position: relative;
+    /* background-attachment: fixed; */
+    z-index: -1;
 }
 
 header img {
     height: 100%;
     width: 100%;
     opacity: 10%;
+}
+
+nav {
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: var(--border-transparent);
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+nav ul li {
+    padding: 1em;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 main {
@@ -168,7 +207,7 @@ footer {
 
 @media screen and (max-width: 768px) {
     header {
-        background-image: url(images/band-portrait.JPG);
+        background-image: url(images/band-portrait.jpeg);
     }
 
     .box {

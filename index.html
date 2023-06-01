@@ -8,9 +8,17 @@
     <title>Lint</title>
 </head>
 <body>
-    <header>
-        <img src="images/logo-transparent.JPG" alt="lint logo transparent background">
+    <header class="parallax" data-depth='0.60'>
+        <img src="images/logo-transparent.JPG" alt="lint logo transparent background" class="parallax" data-depth="0.60">
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
     <main>
         <div class="tagline">
@@ -29,7 +37,13 @@
             </div>
             <div class="box" id="B">
                 <div class="box-content" id="box2">
-                    <iframe width="70%" height="70%" src="https://www.youtube.com/embed/EpgNaXOQSaI"></iframe>
+                    <div class="content-wrapper">
+                        <video width="100%" height="100%" controls>
+                            <source src="images/video.mp4" type="video/mp4">
+                            <source src="images/viedo.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
             <div class="box" id="C">
@@ -55,6 +69,9 @@
             <img src="images/logo-transparent.png" id="footer-img">
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
     <script src="script.js"></script>
 </body>

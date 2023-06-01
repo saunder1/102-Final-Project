@@ -23,7 +23,6 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-color: #181818;
 }
 
@@ -31,28 +30,37 @@ header img {
     height: 100%;
     width: 100%;
     opacity: 10%;
-    position: fixed;
-    z-index: 1;
 }
 
 main {
     position: relative;
-    z-index: 2;
     width: 100%;
     overflow: hidden;
+    background-color: #181818;
 }
 
-.content-boxes {
+.tagline {
+    background-color: #181818;
+    text-align: center;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    padding-top: 2%;
+}
+
+.boxes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: #181818;
+    
 }
 
 .box {
     flex: 0 0 45%; 
     padding-top: 45%;
-    margin: 2.5%; 
     box-sizing: border-box;
     position: relative;
 }
@@ -63,8 +71,58 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border: 10px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    text-align: center;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content-wrapper h1 {
+    font-size: 4vw;
+}
+
+.content-wrapper p {
+    font-size: 1.5vw;
+}
+
+#A {
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 1.25%;
+    margin-right: 1.25%;
+}
+
+#B {
+    margin-top: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 1.25%;
+    margin-left: 1.25%;
+}
+
+#C {
+    margin-bottom: 3.5%;
+    margin-left: 2.5%;
+    margin-top: 1.25%;
+    margin-right: 1.25%;
+}
+
+#D {
+    margin-bottom: 3.5%;
+    margin-right: 2.5%;
+    margin-top: 1.25%;
+    margin-left: 1.25%;
 }
 
 #box1 {
@@ -93,7 +151,6 @@ footer {
     align-items: center;
     padding: 5%;
     position: relative;
-    z-index: 2;
 }
 
 #credit {
@@ -120,12 +177,28 @@ footer {
         margin: 5%;
     }
 
+    .boxes {
+        margin-bottom: 2.5%;
+    }
+
+    .content-wrapper h1 {
+        font-size: 6vw;
+    }
+
+    .content-wrapper p {
+        font-size: 3vw;
+    }
+
     #box3 {
         background-color: #5D5FB4;
     }
 
     #box4 {
         background-color: #A43C23;
+    }
+
+    #A, #B, #C, #D {
+        margin: 2.5%;
     }
 }
 

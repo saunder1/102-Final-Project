@@ -9,26 +9,26 @@
 </head>
 <body>
     <header class="parallax" data-depth='0.60'>
-        <img src="images/logo-transparent.JPG" alt="lint logo transparent background" class="parallax" data-depth="0.60">
+        <img src="images/logo-transparent-glowing.JPG" alt="lint logo transparent background" class="parallax" data-depth="0.60">
     </header>
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html" class="nav-link">home</a></li>
+            <li><a href="about.html" class="nav-link">about</a></li>
+            <li><a href="contact.html" class="nav-link">contact</a></li>
         </ul>
     </nav>
 
     <main>
         <div class="tagline">
-            <h1>Heavy, loud music to leave you wanting.</h1>
+            <h1>heavy, loud music to leave you wanting</h1>
         </div>
         <div class="boxes">
             <div class="box" id="A">
                 <div class="box-content" id="box1">
-                    <div class="content-wrapper">
-                        <h1>Bio</h1>
+                    <div class="content-wrapper" id="contentA">
+                        <h1>bio</h1>
                         <p>
                             Live band from Bellingham, Washington. Formed out of a shared appreciation for artists like Duster, Ceras, and Deerhunter, Lint is a collaborative project between its four members Benjamin Alexander, Olivia Anderson, Connor Cedergreen and Avery Colbrunn. They play a ranging set of original music that spans from dreamy psychedelic indie-rock to cutting pieces that circle around the heaviest end of shoegaze. Currently the band hopes to cut their teeth in the live circuit while recording their debut EP, planned to be out by the end of summer 2023.
                         </p>
@@ -37,7 +37,7 @@
             </div>
             <div class="box" id="B">
                 <div class="box-content" id="box2">
-                    <div class="content-wrapper">
+                    <div class="content-wrapper" id="contentB">
                         <video width="100%" height="100%" controls>
                             <source src="images/video.mp4" type="video/mp4">
                             <source src="images/viedo.ogg" type="video/ogg">
@@ -48,15 +48,33 @@
             </div>
             <div class="box" id="C">
                 <div class="box-content" id="box3">
-                    <div class="content-wrapper">
-                        <iframe src="https://calendar.google.com/calendar/embed?src=0f109857a182e3eba7a2c7211face9e6afb5c8369f95832e291f5988944456b1%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+                    <div class="content-wrapper" id="contentC">
+                        <h1>see us live</h1>
+                        <table class="schedule">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>6/9/23</td>
+                                    <td><a href="https://blueroombham.com/#/events">Blue Room</a></td>
+                                </tr>
+                                <tr>
+                                    <td>6/24/23</td>
+                                    <td>Lettered Sounds</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
             <div class="box" id="D">
                 <div class="box-content" id="box4">
-                    <div class="content-wrapper">
-                        <h1>Contact</h1>
+                    <div class="content-wrapper" id="contentD">
+                        <h1>contact</h1>
                     </div>
                 </div>
             </div>
@@ -64,9 +82,9 @@
     </main>
 
     <footer>
-        <p id="credit">Website: Saunder VanWoerden</p>
+        <!-- <p id="credit">Website: Saunder VanWoerden</p> -->
         <div id="footer-logo">
-            <img src="images/logo-transparent.png" id="footer-img">
+            <img src="images/logo-original.JPG" id="footer-img">
         </div>
     </footer>
 

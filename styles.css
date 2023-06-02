@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@400;700;900&display=swap');
 
 :root {
     --scarf-color: #5D5FB4;
@@ -44,7 +44,6 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-
 }
 
 nav ul {
@@ -68,9 +67,15 @@ nav ul li a {
 
     border-bottom: 3px solid transparent;
     padding-bottom: 2px;
+    font-size: 1.5em;
+    font-weight: 700;
 }
 
 nav ul li a:hover {
+    border-bottom: 3px solid black;
+}
+
+.active {
     border-bottom: 3px solid black;
 }
 
@@ -90,6 +95,7 @@ main {
     align-items: center;
     font-size: 2vw;
     padding-top: 2%;
+    font-family: 'Archivo Black', sans-serif;
 }
 
 .boxes {
@@ -129,14 +135,48 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 5px solid var(--border-color);
 }
 
 .content-wrapper h1 {
-    font-size: 4vw;
+    font-size: 3.5vw;
+    font-family: 'Archivo Black', sans-serif;
 }
 
 .content-wrapper p {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
+}
+
+.schedule {
+    background-color: none;
+    font-size: 1.25vw;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+.schedule th, .schedule td {
+    padding: 15px; /* Change this to the padding you prefer */
+    text-align: center;
+}
+
+.schedule th {
+    font-weight: 900;
+}
+
+.schedule thead tr {
+    border-bottom: 2px solid var(--border-color); /* Change the color if needed */
+}
+
+.schedule tbody tr:not(:last-child) {
+    border-bottom: 2px solid var(--border-color); /* Change the color if needed */
+}
+
+.schedule a {
+    color: var(--border-color)
+}
+
+.schedule a:hover {
+    color: #181818
 }
 
 #A {
@@ -183,6 +223,29 @@ main {
     background-color: var(--scarf-color);
 }
 
+#contentA {
+    padding: 2%;
+    background-color: #4c4d93;
+    box-shadow: 10px 10px 5px #4c4d93;
+}
+
+#contentB {
+    background-color: #7a2d1a;
+    box-shadow: 10px 10px 5px #7a2d1a;
+}
+
+#contentC {
+    padding: 2%;
+    background-color: #7a2d1a;
+    box-shadow: 10px 10px 5px #7a2d1a;
+}
+
+#contentD {
+    background-color: #4c4d93;
+    padding: 2%;
+    box-shadow: 10px 10px 5px #4c4d93;
+}
+
 footer {
     height: 20vh;
     width: 100%;
@@ -217,6 +280,10 @@ footer {
         opacity: 0;
     }
 
+    .tagline {
+        font-size: 3.5vw;
+    }
+
     .box {
         flex: 0 0 90%;
         padding-top: 90%;
@@ -232,6 +299,10 @@ footer {
     }
 
     .content-wrapper p {
+        font-size: 2.5vw;
+    }
+
+    .schedule {
         font-size: 3vw;
     }
 
@@ -245,6 +316,16 @@ footer {
 
     #A, #B, #C, #D {
         margin: 2.5%;
+    }
+
+    #contentC {
+        background-color: #4c4d93;
+        box-shadow: 10px 10px 5px #4c4d93;
+    }
+
+    #contentD {
+        background-color: #7a2d1a;
+        box-shadow: 10px 10px 5px #7a2d1a;
     }
 }
 

@@ -9,7 +9,12 @@
     --border-transparent: #e3d0bf90;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; border: 0; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
 body {
     font-family: 'Roboto Slab', serif;
@@ -117,6 +122,58 @@ nav ul li a {
     margin-left: 15%;
 }
 
+.mobile-nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    background-color: #101010;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    right: -100%;
+    transition: right 0.5s;
+}
+
+.mobile-nav.visible {
+    right: 0;
+}
+
+.mobile-logo {
+    width: 200px;
+    filter: invert(1)
+}
+
+.mobile-nav-links {
+    list-style-type: none;
+    text-align: center;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    color: var(--border-color);
+    font-size: 2em;
+}
+
+.mobile-nav-links a:hover {
+    border-bottom: 3px solid var(--border-color);
+}
+
+.mobile-socials {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.mobile-socials img {
+    width: 30px;
+}
+
 main {
     position: relative;
     width: 100%;
@@ -144,14 +201,14 @@ main {
 }
 
 .box {
-    flex: 0 0 45%; 
+    flex: 0 0 45%;
     padding-top: 45%;
     box-sizing: border-box;
     position: relative;
 }
 
 .box-content {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -190,8 +247,10 @@ main {
     border-collapse: collapse;
 }
 
-.schedule th, .schedule td {
-    padding: 15px; /* Change this to the padding you prefer */
+.schedule th,
+.schedule td {
+    padding: 15px;
+    /* Change this to the padding you prefer */
     text-align: center;
 }
 
@@ -200,11 +259,13 @@ main {
 }
 
 .schedule thead tr {
-    border-bottom: 2px solid var(--border-color); /* Change the color if needed */
+    border-bottom: 2px solid var(--border-color);
+    /* Change the color if needed */
 }
 
 .schedule tbody tr:not(:last-child) {
-    border-bottom: 2px solid var(--border-color); /* Change the color if needed */
+    border-bottom: 2px solid var(--border-color);
+    /* Change the color if needed */
 }
 
 .schedule a {
@@ -349,6 +410,7 @@ footer {
 
 #footer-logo {
     width: 10%;
+
     #footer-img {
         width: 100%;
         filter: invert(1)
@@ -412,7 +474,10 @@ footer {
         background-color: #A43C23;
     }
 
-    #A, #B, #C, #D {
+    #A,
+    #B,
+    #C,
+    #D {
         margin: 2.5%;
     }
 
@@ -442,4 +507,3 @@ footer {
         font-size: 2vw;
     }
 }
-

@@ -1,9 +1,12 @@
+
+// parallax scrolling of header image
+
 const tl = gsap.timeline({
 	scrollTrigger: {
 		trigger: "#parallax",
 		start: "top top",
 		end: "bottom top",
-		scrub: 0.5
+		scrub: true
 	}
 });
 
@@ -13,23 +16,39 @@ gsap.utils.toArray(".parallax").forEach(layer => {
 	tl.to(layer, { y: movement, ease: "none" }, 0)
 });
 
-// window.addEventListener('scroll', function() {
-//     var header = document.querySelector('.parallax');
-//     var scrollY = window.scrollY;
-//     header.style.top = scrollY / 4 + 'px';
-// });
+
+
+// persistent underline for current page
 
 const currentUrl = location.pathname;
-console.log(currentUrl);
 
-// Check for each page
 if (currentUrl === '/102/102-Final-Project/index.html' || currentUrl === '/') {
-	// Add the `active` class to the `nav-link` element with the href of `index.html`
 	document.querySelector('.nav-link[href="index.html"]').classList.add('active');
-} else if (currentUrl === '/102/102-Final-Project/about.html') {
-	// Add the `active` class to the `nav-link` element with the href of `about.html`
-	document.querySelector('.nav-link[href="about.html"]').classList.add('active');
-} else if (currentUrl === '/contact.html') {
-	// Add the `active` class to the `nav-link` element with the href of `contact.html`
-	document.querySelector('.nav-link[href="contact.html"]').classList.add('active');
+} else if (currentUrl === '/102/102-Final-Project/connor.html') {
+	document.querySelector('.nav-link[href="connor.html"]').classList.add('active');
+} else if (currentUrl === '/102/102-Final-Project/olivia.html') {
+	document.querySelector('.nav-link[href="olivia.html"]').classList.add('active');
+} else if (currentUrl === '/102/102-Final-Project/avery.html') {
+	document.querySelector('.nav-link[href="avery.html"]').classList.add('active');
+} else if (currentUrl === '/102/102-Final-Project/ben.html') {
+	document.querySelector('.nav-link[href="ben.html"]').classList.add('active');
 }
+
+
+// hamburger toggling
+
+document.querySelector(".hamburger").addEventListener("click", function() {
+	var nav = document.querySelector(".mobile-nav");
+	nav.classList.toggle("visible");
+});
+
+// allows clicking anywhere to close mobile-nav menu
+
+document.addEventListener("click", function(e) {
+	var nav = document.querySelector(".mobile-nav");
+
+	// Check if the mobile nav is visible and if the target of the click event is not the mobile nav or a descendant of it
+	if (nav.classList.contains("visible") && !nav.contains(e.target) && e.target != document.querySelector(".hamburger")) {
+		nav.classList.remove("visible");
+	}
+});

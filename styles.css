@@ -445,6 +445,7 @@ footer {
     align-items: center;
     padding: 5%;
     position: relative;
+    border-top: 10px solid var(--border-color)
 }
 
 #credit {

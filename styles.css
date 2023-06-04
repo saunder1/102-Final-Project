@@ -63,7 +63,7 @@ nav .nav-links {
 nav .logo {
     justify-self: center;
 
-    width: 6em;
+    width: 6.5em;
     filter: invert(1);
 }
 
@@ -109,6 +109,12 @@ nav ul li a {
 
 .socials img:hover {
     filter: invert(1);
+}
+
+.hamburger {
+    display: none;
+    width: 2.5em;
+    margin-left: 15%;
 }
 
 main {
@@ -346,6 +352,20 @@ footer {
     #footer-img {
         width: 100%;
         filter: invert(1)
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .socials {
+        display: none;
     }
 }
 

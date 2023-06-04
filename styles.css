@@ -49,7 +49,7 @@ nav {
     top: 0;
     z-index: 10;
     border-bottom: 10px solid var(--border-color);
-    background-color: #181818;
+    background-color: #101010;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -77,18 +77,18 @@ nav .socials {
     margin-right: 15%;
 }
 
-nav .socials img {
+nav .socials img, footer .socials img {
     width: 30px;
 }
 
-nav ul {
+nav ul, footer ul {
     list-style-type: none;
     text-align: center;
     display: flex;
     justify-content: center;
 }
 
-nav ul li {
+nav ul li, footer ul li {
     padding: 1em;
 }
 
@@ -389,19 +389,54 @@ main {
     color: red;
 }
 
+.profiles {
+    margin-top: 20px;
+}
+
 .profile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 5%;
+    gap: 20px;
 }
 
 .profile-pic {
-    width: 30%;
+    width: 50%;
+    border: 10px solid var(--border-color)
+}
+
+.profile h1 {
+    font-size: 3.5vw;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.profile h2 {
+    font-size: 1.25vw;
+}
+
+.profile p {
+    padding: 10px;
+    border: 10px solid var(--border-color)
+}
+
+#connie p, #avie p {
+    background-color: var(--mountain-color);
+}
+
+#oliv p, #ben p {
+    background-color: var(--scarf-color);
+}
+
+.insta img {
+    width: 40px;
 }
 
 footer {
-    height: 20vh;
+    height: 15vh;
     width: 100%;
     overflow: hidden;
     background-color: #101010;
@@ -419,11 +454,17 @@ footer {
 }
 
 #footer-logo {
-    width: 10%;
+    width: 200px;
 
     #footer-img {
         width: 100%;
         filter: invert(1)
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .profiles {
+        margin-top: 40px;
     }
 }
 
@@ -438,6 +479,10 @@ footer {
 
     .socials li {
         padding: 0.25em;
+    }
+
+    .profiles {
+        margin-top: 60px;
     }
 }
 
@@ -515,5 +560,23 @@ footer {
 
     #contentD input[type="email"]::placeholder {
         font-size: 2vw;
+    }
+
+    .profile h1 {
+        font-size: 6vw;
+    }
+
+    .profile h2 {
+        font-size: 4vw;
+    }
+
+    .profile-pic {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .profiles {
+        margin-top: 80px;
     }
 }

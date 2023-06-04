@@ -455,11 +455,11 @@ footer {
 
 #footer-logo {
     width: 200px;
+}
 
-    #footer-img {
-        width: 100%;
-        filter: invert(1)
-    }
+#footer-img {
+    width: 100%;
+    filter: invert(1)
 }
 
 @media screen and (max-width: 1500px) {

@@ -396,7 +396,6 @@ main {
 .profile {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     width: 70%;
     margin: 0 auto;
@@ -564,11 +563,11 @@ footer {
     }
 
     .profile h1 {
-        font-size: 6vw;
+        font-size: 10vw;
     }
 
     .profile h2 {
-        font-size: 4vw;
+        font-size: 8vw;
     }
 
     .profile-pic {

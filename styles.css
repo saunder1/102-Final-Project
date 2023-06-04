@@ -33,7 +33,6 @@ header {
     background-color: #181818;
 
     position: relative;
-    /* background-attachment: fixed; */
     z-index: -1;
 }
 
@@ -249,7 +248,6 @@ main {
 
 .schedule th, .schedule td {
     padding: 15px;
-    /* Change this to the padding you prefer */
     text-align: center;
 }
 
@@ -259,12 +257,10 @@ main {
 
 .schedule thead tr {
     border-bottom: 2px solid var(--border-color);
-    /* Change the color if needed */
 }
 
 .schedule tbody tr:not(:last-child) {
     border-bottom: 2px solid var(--border-color);
-    /* Change the color if needed */
 }
 
 .schedule a {
@@ -387,6 +383,21 @@ main {
 #contentD button[type="submit"]:hover {
     background-color: #181818;
     color: var(--border-color);
+}
+
+.invalid::placeholder {
+    color: red;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 30%;
 }
 
 footer {

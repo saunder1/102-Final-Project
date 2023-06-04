@@ -1,36 +1,17 @@
-
-// parallax scrolling of header image
-
-const tl = gsap.timeline({
-	scrollTrigger: {
-		trigger: "#parallax",
-		start: "top top",
-		end: "bottom top",
-		scrub: true
-	}
-});
-
-gsap.utils.toArray(".parallax").forEach(layer => {
-	const depth = layer.dataset.depth;
-	const movement = (layer.offsetHeight * depth)
-	tl.to(layer, { y: movement, ease: "none" }, 0)
-});
-
-
-
 // persistent underline for current page
 
-const currentUrl = location.pathname;
+const fullUrl = location.pathname;
+const currentUrl = fullUrl.split("/").pop();
 
-if (currentUrl === '/102/102-Final-Project/index.html' || currentUrl === '/') {
+if (currentUrl === 'index.html' || currentUrl === '/') {
 	document.querySelector('.nav-link[href="index.html"]').classList.add('active');
-} else if (currentUrl === '/102/102-Final-Project/connor.html') {
+} else if (currentUrl === 'connor.html') {
 	document.querySelector('.nav-link[href="connor.html"]').classList.add('active');
-} else if (currentUrl === '/102/102-Final-Project/olivia.html') {
+} else if (currentUrl === 'olivia.html') {
 	document.querySelector('.nav-link[href="olivia.html"]').classList.add('active');
-} else if (currentUrl === '/102/102-Final-Project/avery.html') {
+} else if (currentUrl === 'avery.html') {
 	document.querySelector('.nav-link[href="avery.html"]').classList.add('active');
-} else if (currentUrl === '/102/102-Final-Project/ben.html') {
+} else if (currentUrl === 'ben.html') {
 	document.querySelector('.nav-link[href="ben.html"]').classList.add('active');
 }
 
@@ -47,7 +28,6 @@ document.querySelector(".hamburger").addEventListener("click", function() {
 document.addEventListener("click", function(e) {
 	var nav = document.querySelector(".mobile-nav");
 
-	// Check if the mobile nav is visible and if the target of the click event is not the mobile nav or a descendant of it
 	if (nav.classList.contains("visible") && !nav.contains(e.target) && e.target != document.querySelector(".hamburger")) {
 		nav.classList.remove("visible");
 	}

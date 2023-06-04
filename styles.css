@@ -574,6 +574,10 @@ footer {
     .profile-pic {
         width: 300px;
     }
+
+    .profile {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 600px) {

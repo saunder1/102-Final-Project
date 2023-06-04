@@ -247,8 +247,7 @@ main {
     border-collapse: collapse;
 }
 
-.schedule th,
-.schedule td {
+.schedule th, .schedule td {
     padding: 15px;
     /* Change this to the padding you prefer */
     text-align: center;
@@ -426,8 +425,8 @@ footer {
         display: none;
     }
 
-    .socials {
-        display: none;
+    .socials li {
+        padding: 0.25em;
     }
 }
 
